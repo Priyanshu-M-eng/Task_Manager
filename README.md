@@ -242,6 +242,20 @@ docker build -t backend-assignment .
 docker run -p 5000:5000 backend-assignment
 ```
 
+## ☁️ Cloud Deployment (Render & Vercel)
+
+For deploying backend to Render and frontend to Vercel:
+- 📖 **Detailed Guide**: [DEPLOYMENT.md](./DEPLOYMENT.md)
+- ⚡ **Quick Reference**: [QUICK_DEPLOY.md](./QUICK_DEPLOY.md)
+
+### Quick Start:
+1. Backend → Render (with MongoDB Atlas)
+2. Frontend → Vercel
+3. Update CORS settings
+4. Test the deployment
+
+See the deployment guides for step-by-step instructions in Hindi.
+
 ## 🚀 Scalability Considerations
 
 See [SCALABILITY.md](./SCALABILITY.md) for detailed notes on:
