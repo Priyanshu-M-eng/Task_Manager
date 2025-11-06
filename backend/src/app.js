@@ -50,6 +50,22 @@ if (process.env.NODE_ENV === 'development') {
 // API Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+// Root route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Backend API is running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      docs: '/api-docs',
+      auth: '/api/v1/auth',
+      tasks: '/api/v1/tasks',
+    },
+    timestamp: new Date().toISOString(),
+  });
+});
+
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({
